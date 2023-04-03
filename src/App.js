@@ -67,6 +67,10 @@ function App() {
         />
         <Route path="/login" element={<Login setCartItems={setCartItems} />} />
         <Route
+          path="/register"
+          element={<Register setCartItems={setCartItems} />}
+        />
+        <Route
           path="/cart"
           element={
             <Cart
@@ -84,7 +88,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </AppContext.Provider>

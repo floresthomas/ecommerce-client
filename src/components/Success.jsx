@@ -43,7 +43,7 @@ const Success = ({ setCartItems }) => {
             <li key={item.id}>
               <div className="bg-white rounded-lg shadow-lg p-4">
                 <h3 className="font-medium mb-2">{item.title}</h3>
-                <img className="h-[170px] w-[200px]" src={item.images} />
+                <img className="h-[180px] w-[200px]" src={item.images} />
                 <p className="text-sm text-gray-500 mt-2">{item.description}</p>
                 <p className="text-sm font-medium text-black">${item.price}</p>
               </div>

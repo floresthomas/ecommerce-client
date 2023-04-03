@@ -31,12 +31,12 @@ export const Cart = ({ cartItems, handleRemoveItem, handleAddProduct }) => {
     <div>
       <div>
         {cartItems.length === 0 ? (
-          <div className="flex items-center justify-center h-screen font-bold">
+          <div className="flex items-center justify-center h-[500px] font-bold">
             No items are added
           </div>
         ) : (
           <section>
-            <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 h-[700px]">
               <div class="mx-auto max-w-3xl">
                 <header class="text-center">
                   <h1 class="text-xl font-bold text-gray-900 sm:text-3xl">

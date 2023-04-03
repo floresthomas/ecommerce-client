@@ -84,7 +84,7 @@ const Login = ({ setCartItems }) => {
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center mt-20">
+      <div className="flex flex-col gap-2 items-center mt-20 h-[400px]">
         <h2 className="font-bold text-2xl mb-5">Welcome back</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-2 max-w-sm">
           <input

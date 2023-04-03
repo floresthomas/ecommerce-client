@@ -13,7 +13,7 @@ const Navbar = ({ cartItems, setCartItems }) => {
         <FaDeezer className="text-2xl text-pink-600" />
         <Link to="/">
           <span className="text-2xl font-semibold text-pink-600">
-            Deezer shopping
+            Ecommerce
           </span>
         </Link>
       </div>

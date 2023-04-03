@@ -10,7 +10,7 @@ import { AppContext } from "../App";
 
 const provider = new GoogleAuthProvider();
 
-const Register = () => {
+const Register = ({ setCartItems }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { setUser } = useContext(AppContext);
@@ -23,6 +23,11 @@ const Register = () => {
         const user = userCredential.user;
         // ...
         console.log("user", user);
+        localStorage.setItem("user", JSON.stringify(user));
+        const cartFromLocalStorage = JSON.parse(
+          localStorage.getItem("cart") || "[]"
+        );
+        setCartItems(cartFromLocalStorage);
         setUser(user);
         navigate("/");
       })
@@ -46,6 +51,11 @@ const Register = () => {
         // ...
         console.log("token", token);
         console.log("user", user);
+        localStorage.setItem("user", JSON.stringify(user));
+        const cartFromLocalStorage = JSON.parse(
+          localStorage.getItem("cart") || "[]"
+        );
+        setCartItems(cartFromLocalStorage);
         setUser(user);
       })
       .catch((error) => {
@@ -71,7 +81,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center mt-20">
+      <div className="flex flex-col gap-2 items-center mt-20 h-[400px]">
         <h2 className="font-bold text-2xl mb-5">Create your account</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-2 max-w-sm">
           <input
